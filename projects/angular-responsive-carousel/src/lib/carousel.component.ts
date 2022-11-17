@@ -256,7 +256,9 @@ export class CarouselComponent implements OnDestroy {
     }
 
     ngOnDestroy() {
+      if(this.touches){
         this.touches.destroy();
+      }
         //this.carousel.destroy();
     }
 
